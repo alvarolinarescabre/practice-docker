@@ -11,6 +11,6 @@ RUN pip install -r requirements.txt
 FROM python:alpine3.16
 WORKDIR /app
 COPY --from=builder /app/venv ./venv
-COPY main.py .
+COPY hello.py .
 ENV PATH="/app/venv/bin:$PATH"
-CMD ["python", "main.py"]
+CMD ["python", "hello.py"]
